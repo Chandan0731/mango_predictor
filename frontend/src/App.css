@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:ital,wght@0,400;1,500&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-image: url('/alexander-schimmeck-vTXtQ8ZBzvY-unsplash.jpg'); /* Make sure the image exists in public */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  color: #1b5e20;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.upload-section {
+  margin: 20px 0;
+}
+
+.custom-file-input {
+  background-color: #fff;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 2px solid #4caf50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.custom-file-input:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.preview {
+  display: block;
+  margin: 20px auto;
+  width: 220px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.predict-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.predict-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #4caf50aa;
+}
+
+.predict-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px #4caf50cc;
+}
+
+.predict-btn:disabled {
+  background-color: #b5e2b5;
+  cursor: not-allowed;
+}
+
+.result-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #eafde6;
+  border: 1px solid #b6e5b6;
+  border-radius: 10px;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.error {
+  color: red;
+}
+
+.footer {
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+  font-style: italic;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(245, 243, 243, 0.6);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
