@@ -85,9 +85,13 @@ Open `http://localhost:5173` in your browser.
 
 Since the backend runs TensorFlow and a 130MB ML model, deploy it to a Python container platform like [Render](https://render.com) or [Hugging Face Spaces](https://huggingface.co/spaces):
 
-1. Create a new **Web Service** on Render connected to this repository.
-2. Set Root Directory: `backend`
-3. Environment: `Python 3`
-4. Build Command: `pip install -r requirements.txt`
-5. Start Command: `gunicorn backend:app`
-6. Once deployed, copy the Render URL and set it as `VITE_API_URL` in your Vercel project settings.
+1. Create a new **Web Service** on Render connected to `Chandan0731/mango_predictor`.
+2. Configure settings:
+   - **Root Directory**: `backend`
+   - **Runtime**: `Python 3`
+   - **Build Command**: `git lfs pull && pip install -r requirements.txt`
+   - **Start Command**: `gunicorn --bind 0.0.0.0:$PORT --timeout 120 backend:app`
+   - *(Optional)* In **Environment**, ensure `PYTHON_VERSION` is set to `3.11.9` (Render will also read `.python-version` automatically).
+3. Once deployed, copy the Render URL (e.g., `https://mango-classifier.onrender.com`).
+4. Go back to your **Vercel Project Settings > Environment Variables**, set `VITE_API_URL` to that URL, and redeploy frontend.
+
